@@ -1,1023 +1,413 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>Artiluxe Interiors | Where Art Meets Luxury</title>
+<title>Artiluxe Interiors | Where Art Meets Luxury</title>
 
-  <meta name="description"
-        content="Artiluxe Interiors — premium interior solutions and luxury wall panels where art meets luxury.">
+<meta name="description" content="Artiluxe Interiors - Premium interior solutions and luxury wall panels where Art Meets Luxury.">
 
-  <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
-    html {
-      scroll-behavior: smooth;
-    }
+html {
+    scroll-behavior: smooth;
+}
 
-    body {
-      font-family: Arial, Helvetica, sans-serif;
-      background: #0b0b0b;
-      color: #ffffff;
-      line-height: 1.6;
-    }
+body {
+    font-family: Georgia, "Times New Roman", serif;
+    background: #050505;
+    color: #ffffff;
+}
 
-    a {
-      color: inherit;
-      text-decoration: none;
-    }
+/* HEADER */
+header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 10;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 22px 6%;
+    background: rgba(0, 0, 0, 0.25);
+}
 
-    img {
-      max-width: 100%;
-      display: block;
-    }
+.logo {
+    width: 145px;
+    height: auto;
+    display: block;
+}
 
-    :root {
-      --gold: #c9a45c;
-      --gold-light: #e4c98a;
-      --black: #0b0b0b;
-      --dark: #121212;
-      --dark-2: #1a1a1a;
-      --white: #ffffff;
-      --gray: #b8b8b8;
-    }
+nav {
+    display: flex;
+    gap: 35px;
+}
 
-    /* ================= HEADER ================= */
+nav a {
+    color: #ffffff;
+    text-decoration: none;
+    font-family: Arial, sans-serif;
+    font-size: 15px;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    color: #d6ad55;
+}
+
+/* HERO */
+.hero {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    padding: 150px 8% 80px;
+    background:
+        radial-gradient(circle at 75% 40%, rgba(198, 155, 70, 0.12), transparent 30%),
+        linear-gradient(110deg, #020202 0%, #07120e 50%, #020202 100%);
+}
+
+.hero-content {
+    max-width: 850px;
+}
+
+.hero h1 {
+    font-size: clamp(55px, 8vw, 105px);
+    line-height: 0.95;
+    font-weight: 500;
+    letter-spacing: -3px;
+    margin-bottom: 30px;
+}
+
+.hero h1 span {
+    color: #d6ad55;
+}
+
+.hero-text {
+    max-width: 700px;
+    font-family: Arial, sans-serif;
+    font-size: 18px;
+    line-height: 1.7;
+    color: #d4d4d4;
+    margin-bottom: 40px;
+}
+
+.hero-buttons {
+    display: flex;
+    gap: 18px;
+    flex-wrap: wrap;
+}
+
+.btn-primary,
+.btn-secondary {
+    display: inline-block;
+    padding: 16px 28px;
+    text-decoration: none;
+    font-family: Arial, sans-serif;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+.btn-primary {
+    background: #d6ad55;
+    color: #080808;
+}
+
+.btn-primary:hover {
+    background: #f0ce7c;
+}
+
+.btn-secondary {
+    border: 1px solid #d6ad55;
+    color: #ffffff;
+}
+
+.btn-secondary:hover {
+    background: #d6ad55;
+    color: #080808;
+}
+
+/* SECTION */
+section.content-section {
+    padding: 100px 8%;
+    background: #0b0b0b;
+}
+
+.section-title {
+    font-size: 50px;
+    font-weight: 500;
+    margin-bottom: 20px;
+}
+
+.section-title span {
+    color: #d6ad55;
+}
+
+.section-text {
+    max-width: 750px;
+    font-family: Arial, sans-serif;
+    color: #bdbdbd;
+    font-size: 17px;
+    line-height: 1.8;
+}
+
+/* SERVICES */
+.services {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+    margin-top: 50px;
+}
+
+.service-card {
+    padding: 40px 30px;
+    border: 1px solid rgba(214, 173, 85, 0.25);
+    background: #101010;
+    transition: 0.3s;
+}
+
+.service-card:hover {
+    transform: translateY(-6px);
+    border-color: #d6ad55;
+}
+
+.service-card h3 {
+    color: #d6ad55;
+    font-size: 25px;
+    margin-bottom: 15px;
+}
+
+.service-card p {
+    font-family: Arial, sans-serif;
+    color: #bdbdbd;
+    line-height: 1.7;
+}
+
+/* CONTACT */
+.contact {
+    background: #050505 !important;
+}
+
+.contact-box {
+    margin-top: 40px;
+    padding: 40px;
+    border: 1px solid rgba(214, 173, 85, 0.3);
+    max-width: 700px;
+}
+
+.contact-box p {
+    font-family: Arial, sans-serif;
+    color: #d0d0d0;
+    margin: 12px 0;
+}
+
+/* FOOTER */
+footer {
+    padding: 30px 8%;
+    text-align: center;
+    background: #000000;
+    border-top: 1px solid rgba(214, 173, 85, 0.2);
+    font-family: Arial, sans-serif;
+    color: #888888;
+    font-size: 14px;
+}
+
+/* MOBILE */
+@media (max-width: 800px) {
 
     header {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      z-index: 1000;
-      background: rgba(5, 5, 5, 0.94);
-      backdrop-filter: blur(12px);
-      border-bottom: 1px solid rgba(201, 164, 92, 0.25);
-    }
-
-    .nav {
-      max-width: 1200px;
-      margin: auto;
-      padding: 14px 25px;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 30px;
+        padding: 18px 5%;
     }
 
     .logo {
-      width: 150px;
-      height: auto;
-      object-fit: contain;
+        width: 115px;
     }
 
-    .nav-links {
-      display: flex;
-      align-items: center;
-      gap: 28px;
-      list-style: none;
+    nav {
+        gap: 14px;
     }
 
-    .nav-links a {
-      color: #ffffff;
-      font-size: 14px;
-      letter-spacing: 1px;
-      transition: 0.3s;
+    nav a {
+        font-size: 12px;
     }
-
-    .nav-links a:hover {
-      color: var(--gold-light);
-    }
-
-    .nav-btn {
-      border: 1px solid var(--gold);
-      padding: 10px 18px;
-      color: var(--gold-light) !important;
-    }
-
-    .nav-btn:hover {
-      background: var(--gold);
-      color: #000 !important;
-    }
-
-    /* ================= HERO ================= */
 
     .hero {
-      min-height: 100vh;
-      padding: 150px 25px 90px;
-      display: flex;
-      align-items: center;
-      position: relative;
-      overflow: hidden;
-      background:
-        radial-gradient(circle at 80% 30%, rgba(201,164,92,0.12), transparent 35%),
-        linear-gradient(135deg, #080808, #151515);
-    }
-
-    .hero::before {
-      content: "";
-      position: absolute;
-      inset: 0;
-      background:
-        linear-gradient(
-          90deg,
-          rgba(0,0,0,0.92),
-          rgba(0,0,0,0.65),
-          rgba(0,0,0,0.25)
-        );
-    }
-
-    .hero-content {
-      position: relative;
-      z-index: 2;
-      max-width: 1200px;
-      width: 100%;
-      margin: auto;
-    }
-
-    .hero-small {
-      color: var(--gold-light);
-      font-size: 14px;
-      letter-spacing: 4px;
-      text-transform: uppercase;
-      margin-bottom: 18px;
+        padding: 150px 7% 70px;
     }
 
     .hero h1 {
-      font-family: Georgia, "Times New Roman", serif;
-      font-size: clamp(48px, 7vw, 92px);
-      line-height: 1;
-      max-width: 850px;
-      margin-bottom: 25px;
-      font-weight: 500;
+        font-size: 55px;
+        letter-spacing: -2px;
     }
 
-    .hero h1 span {
-      color: var(--gold-light);
+    .hero-text {
+        font-size: 16px;
     }
-
-    .hero p {
-      max-width: 650px;
-      color: #d0d0d0;
-      font-size: 18px;
-      margin-bottom: 35px;
-    }
-
-    .hero-buttons {
-      display: flex;
-      gap: 15px;
-      flex-wrap: wrap;
-    }
-
-    .btn {
-      display: inline-block;
-      padding: 14px 27px;
-      border: 1px solid var(--gold);
-      letter-spacing: 1px;
-      font-size: 14px;
-      transition: 0.3s;
-    }
-
-    .btn-primary {
-      background: var(--gold);
-      color: #000;
-    }
-
-    .btn-primary:hover {
-      background: var(--gold-light);
-    }
-
-    .btn-outline {
-      color: var(--gold-light);
-    }
-
-    .btn-outline:hover {
-      background: var(--gold);
-      color: #000;
-    }
-
-    /* ================= GENERAL ================= */
-
-    section {
-      padding: 100px 25px;
-    }
-
-    .container {
-      max-width: 1200px;
-      margin: auto;
-    }
-
-    .section-heading {
-      text-align: center;
-      margin-bottom: 55px;
-    }
-
-    .section-heading small {
-      color: var(--gold-light);
-      text-transform: uppercase;
-      letter-spacing: 3px;
-      font-size: 12px;
-    }
-
-    .section-heading h2 {
-      font-family: Georgia, "Times New Roman", serif;
-      font-size: clamp(36px, 5vw, 58px);
-      font-weight: 400;
-      margin-top: 10px;
-    }
-
-    .section-heading p {
-      max-width: 650px;
-      margin: 15px auto 0;
-      color: var(--gray);
-    }
-
-    /* ================= ABOUT ================= */
-
-    .about {
-      background: #101010;
-    }
-
-    .about-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 70px;
-      align-items: center;
-    }
-
-    .about-image {
-      min-height: 500px;
-      border: 1px solid rgba(201,164,92,0.35);
-      background:
-        linear-gradient(
-          135deg,
-          rgba(201,164,92,0.08),
-          rgba(0,0,0,0.5)
-        );
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      padding: 35px;
-    }
-
-    .about-image img {
-      width: 85%;
-      max-width: 350px;
-    }
-
-    .about-text h3 {
-      font-family: Georgia, "Times New Roman", serif;
-      font-size: 40px;
-      font-weight: 400;
-      margin-bottom: 20px;
-    }
-
-    .about-text h3 span {
-      color: var(--gold-light);
-    }
-
-    .about-text p {
-      color: var(--gray);
-      margin-bottom: 18px;
-    }
-
-    /* ================= SERVICES ================= */
 
     .services {
-      background: #080808;
-    }
-
-    .service-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 22px;
-    }
-
-    .service-card {
-      padding: 40px 30px;
-      background: #121212;
-      border: 1px solid #272727;
-      transition: 0.4s;
-      position: relative;
-      overflow: hidden;
-    }
-
-    .service-card::before {
-      content: "";
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 2px;
-      background: var(--gold);
-      transform: scaleX(0);
-      transform-origin: left;
-      transition: 0.4s;
-    }
-
-    .service-card:hover {
-      transform: translateY(-8px);
-      border-color: rgba(201,164,92,0.5);
-    }
-
-    .service-card:hover::before {
-      transform: scaleX(1);
-    }
-
-    .service-number {
-      color: var(--gold);
-      font-size: 13px;
-      letter-spacing: 2px;
-      margin-bottom: 25px;
-    }
-
-    .service-card h3 {
-      font-family: Georgia, "Times New Roman", serif;
-      font-size: 27px;
-      font-weight: 400;
-      margin-bottom: 15px;
-    }
-
-    .service-card p {
-      color: var(--gray);
-      font-size: 15px;
-    }
-
-    /* ================= WALL PANELS ================= */
-
-    .panels {
-      background: #111111;
-    }
-
-    .panel-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 20px;
-    }
-
-    .panel-card {
-      min-height: 330px;
-      padding: 30px;
-      display: flex;
-      align-items: flex-end;
-      position: relative;
-      overflow: hidden;
-      background:
-        linear-gradient(
-          145deg,
-          #292929,
-          #080808
-        );
-      border: 1px solid #292929;
-    }
-
-    .panel-card:nth-child(2) {
-      background:
-        linear-gradient(
-          145deg,
-          #36312a,
-          #080808
-        );
-    }
-
-    .panel-card:nth-child(3) {
-      background:
-        linear-gradient(
-          145deg,
-          #282828,
-          #101010
-        );
-    }
-
-    .panel-card::after {
-      content: "";
-      position: absolute;
-      inset: 0;
-      background:
-        linear-gradient(
-          transparent 45%,
-          rgba(0,0,0,0.9)
-        );
-    }
-
-    .panel-info {
-      position: relative;
-      z-index: 2;
-    }
-
-    .panel-info h3 {
-      font-family: Georgia, "Times New Roman", serif;
-      font-size: 28px;
-      font-weight: 400;
-      margin-bottom: 5px;
-    }
-
-    .panel-info p {
-      color: #d1d1d1;
-      font-size: 14px;
-    }
-
-    /* ================= WHY US ================= */
-
-    .why {
-      background: #080808;
-    }
-
-    .why-grid {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: 20px;
-    }
-
-    .why-card {
-      text-align: center;
-      padding: 35px 20px;
-      border: 1px solid #252525;
-      background: #101010;
-    }
-
-    .why-icon {
-      width: 55px;
-      height: 55px;
-      border: 1px solid var(--gold);
-      color: var(--gold-light);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      margin: 0 auto 20px;
-      font-size: 20px;
-    }
-
-    .why-card h3 {
-      font-family: Georgia, "Times New Roman", serif;
-      font-size: 21px;
-      font-weight: 400;
-      margin-bottom: 10px;
-    }
-
-    .why-card p {
-      color: var(--gray);
-      font-size: 14px;
-    }
-
-    /* ================= CTA ================= */
-
-    .cta {
-      padding: 120px 25px;
-      text-align: center;
-      background:
-        radial-gradient(
-          circle at center,
-          rgba(201,164,92,0.12),
-          transparent 55%
-        ),
-        #0c0c0c;
-    }
-
-    .cta h2 {
-      font-family: Georgia, "Times New Roman", serif;
-      font-size: clamp(38px, 6vw, 65px);
-      font-weight: 400;
-      margin-bottom: 18px;
-    }
-
-    .cta h2 span {
-      color: var(--gold-light);
-    }
-
-    .cta p {
-      max-width: 650px;
-      margin: 0 auto 30px;
-      color: var(--gray);
-    }
-
-    /* ================= FOOTER ================= */
-
-    footer {
-      background: #050505;
-      border-top: 1px solid #242424;
-      padding: 60px 25px 25px;
-    }
-
-    .footer-grid {
-      max-width: 1200px;
-      margin: auto;
-      display: grid;
-      grid-template-columns: 1.5fr 1fr 1fr;
-      gap: 50px;
-      padding-bottom: 40px;
-    }
-
-    .footer-logo {
-      width: 170px;
-      margin-bottom: 20px;
-    }
-
-    .footer-about p {
-      color: var(--gray);
-      max-width: 400px;
-      font-size: 14px;
-    }
-
-    .footer-column h3 {
-      color: var(--gold-light);
-      font-size: 15px;
-      letter-spacing: 1px;
-      margin-bottom: 18px;
-      text-transform: uppercase;
-    }
-
-    .footer-column a {
-      display: block;
-      color: #bdbdbd;
-      font-size: 14px;
-      margin-bottom: 10px;
-      transition: 0.3s;
-    }
-
-    .footer-column a:hover {
-      color: var(--gold-light);
-    }
-
-    .copyright {
-      max-width: 1200px;
-      margin: auto;
-      padding-top: 25px;
-      border-top: 1px solid #222;
-      text-align: center;
-      color: #777;
-      font-size: 12px;
-    }
-
-    /* ================= MOBILE ================= */
-
-    @media (max-width: 900px) {
-
-      .nav {
-        padding: 12px 18px;
-      }
-
-      .nav-links {
-        gap: 12px;
-      }
-
-      .nav-links a {
-        font-size: 11px;
-      }
-
-      .logo {
-        width: 115px;
-      }
-
-      .about-grid {
         grid-template-columns: 1fr;
-      }
-
-      .service-grid,
-      .panel-grid {
-        grid-template-columns: 1fr 1fr;
-      }
-
-      .why-grid {
-        grid-template-columns: 1fr 1fr;
-      }
-
-      .footer-grid {
-        grid-template-columns: 1fr 1fr;
-      }
     }
 
-    @media (max-width: 600px) {
-
-      .nav-links {
-        display: none;
-      }
-
-      .hero {
-        padding-top: 130px;
-      }
-
-      .hero h1 {
-        font-size: 48px;
-      }
-
-      .hero p {
-        font-size: 16px;
-      }
-
-      section {
-        padding: 75px 18px;
-      }
-
-      .service-grid,
-      .panel-grid,
-      .why-grid,
-      .footer-grid {
-        grid-template-columns: 1fr;
-      }
-
-      .about-image {
-        min-height: 350px;
-      }
-
-      .about-text h3 {
-        font-size: 34px;
-      }
-
-      .cta {
-        padding: 90px 18px;
-      }
+    .section-title {
+        font-size: 40px;
     }
-  </style>
+}
+</style>
 </head>
 
 <body>
 
-  <!-- ================= HEADER ================= -->
+<header>
 
-  <header>
-    <nav class="nav">
-
-      <a href="#home">
+    <a href="#home">
         <img
-          src="artiluxe logo black bg.jpeg"
-          alt="Artiluxe Interiors"
-          class="logo"
-        >
-      </a>
-
-      <ul class="nav-links">
-        <li><a href="#home">Home</a></li>
-        <li><a href="#about">About</a></li>
-        <li><a href="#services">Services</a></li>
-        <li><a href="#panels">Wall Panels</a></li>
-        <li><a href="#contact" class="nav-btn">Contact</a></li>
-      </ul>
-
-    </nav>
-  </header>
-
-
-  <!-- ================= HERO ================= -->
-
-  <section class="hero" id="home">
-
-    <div class="hero-content">
-
-      <div class="hero-small">
-        Artiluxe Interiors
-      </div>
-
-      <h1>
-        Where <span>Art</span><br>
-        Meets Luxury.
-      </h1>
-
-      <p>
-        Premium interior solutions and luxury wall panels
-        designed to transform ordinary spaces into
-        extraordinary environments.
-      </p>
-
-      <div class="hero-buttons">
-        <a href="#services" class="btn btn-primary">
-          Explore Our Services
-        </a>
-
-        <a href="#contact" class="btn btn-outline">
-          Start Your Project
-        </a>
-      </div>
-
-    </div>
-
-  </section>
-
-
-  <!-- ================= ABOUT ================= -->
-
-  <section class="about" id="about">
-
-    <div class="container">
-
-      <div class="section-heading">
-        <small>About Artiluxe</small>
-        <h2>Designed Beyond Ordinary</h2>
-        <p>
-          Creating sophisticated spaces through thoughtful design,
-          premium materials and refined craftsmanship.
-        </p>
-      </div>
-
-      <div class="about-grid">
-
-        <div class="about-image">
-
-          <img
             src="artiluxe logo black bg.jpeg"
             alt="Artiluxe Interiors Logo"
-          >
-
-        </div>
-
-        <div class="about-text">
-
-          <h3>
-            Luxury is in the
-            <span>details.</span>
-          </h3>
-
-          <p>
-            Artiluxe Interiors brings together contemporary
-            aesthetics, premium materials and artistic design
-            to create interiors that make a lasting impression.
-          </p>
-
-          <p>
-            From feature walls to complete interior solutions,
-            our approach focuses on elegance, functionality and
-            timeless visual appeal.
-          </p>
-
-          <p>
-            We believe every space deserves its own identity —
-            beautifully designed and carefully finished.
-          </p>
-
-        </div>
-
-      </div>
-
-    </div>
-
-  </section>
-
-
-  <!-- ================= SERVICES ================= -->
-
-  <section class="services" id="services">
-
-    <div class="container">
-
-      <div class="section-heading">
-        <small>What We Do</small>
-        <h2>Our Services</h2>
-        <p>
-          Premium solutions for residential, commercial and
-          hospitality interiors.
-        </p>
-      </div>
-
-      <div class="service-grid">
-
-        <div class="service-card">
-          <div class="service-number">01</div>
-          <h3>Luxury Interiors</h3>
-          <p>
-            Elegant interior concepts combining modern
-            aesthetics, functionality and premium finishes.
-          </p>
-        </div>
-
-        <div class="service-card">
-          <div class="service-number">02</div>
-          <h3>Wall Panels</h3>
-          <p>
-            Premium decorative wall panels designed to create
-            sophisticated feature walls and statement spaces.
-          </p>
-        </div>
-
-        <div class="service-card">
-          <div class="service-number">03</div>
-          <h3>Feature Walls</h3>
-          <p>
-            Bespoke feature-wall concepts that add character,
-            depth and luxury to interiors.
-          </p>
-        </div>
-
-        <div class="service-card">
-          <div class="service-number">04</div>
-          <h3>Residential Spaces</h3>
-          <p>
-            Refined interiors for homes, apartments, villas
-            and premium residential spaces.
-          </p>
-        </div>
-
-        <div class="service-card">
-          <div class="service-number">05</div>
-          <h3>Commercial Interiors</h3>
-          <p>
-            Stylish environments for offices, retail spaces,
-            showrooms and commercial establishments.
-          </p>
-        </div>
-
-        <div class="service-card">
-          <div class="service-number">06</div>
-          <h3>Hospitality Spaces</h3>
-          <p>
-            Premium interior solutions for hotels, restaurants,
-            lounges and hospitality environments.
-          </p>
-        </div>
-
-      </div>
-
-    </div>
-
-  </section>
-
-
-  <!-- ================= WALL PANELS ================= -->
-
-  <section class="panels" id="panels">
-
-    <div class="container">
-
-      <div class="section-heading">
-        <small>Signature Collection</small>
-        <h2>Luxury Wall Panels</h2>
-        <p>
-          Transform blank walls into architectural statements.
-        </p>
-      </div>
-
-      <div class="panel-grid">
-
-        <div class="panel-card">
-          <div class="panel-info">
-            <h3>Modern Elegance</h3>
-            <p>Clean lines and sophisticated finishes.</p>
-          </div>
-        </div>
-
-        <div class="panel-card">
-          <div class="panel-info">
-            <h3>Classic Luxury</h3>
-            <p>Rich textures with timeless character.</p>
-          </div>
-        </div>
-
-        <div class="panel-card">
-          <div class="panel-info">
-            <h3>Contemporary</h3>
-            <p>Bold designs for modern interiors.</p>
-          </div>
-        </div>
-
-      </div>
-
-    </div>
-
-  </section>
-
-
-  <!-- ================= WHY ARTILUXE ================= -->
-
-  <section class="why">
-
-    <div class="container">
-
-      <div class="section-heading">
-        <small>The Artiluxe Difference</small>
-        <h2>Why Choose Us</h2>
-      </div>
-
-      <div class="why-grid">
-
-        <div class="why-card">
-          <div class="why-icon">✦</div>
-          <h3>Premium Design</h3>
-          <p>
-            Thoughtful designs created for sophisticated spaces.
-          </p>
-        </div>
-
-        <div class="why-card">
-          <div class="why-icon">◆</div>
-          <h3>Quality Materials</h3>
-          <p>
-            Carefully selected materials for lasting beauty.
-          </p>
-        </div>
-
-        <div class="why-card">
-          <div class="why-icon">◇</div>
-          <h3>Attention to Detail</h3>
-          <p>
-            Every element is considered to create a refined finish.
-          </p>
-        </div>
-
-        <div class="why-card">
-          <div class="why-icon">✧</div>
-          <h3>Elegant Results</h3>
-          <p>
-            Interiors designed to leave a memorable impression.
-          </p>
-        </div>
-
-      </div>
-
-    </div>
-
-  </section>
-
-
-  <!-- ================= CONTACT CTA ================= -->
-
-  <section class="cta" id="contact">
-
-    <div class="container">
-
-      <h2>
-        Let's Create Something
-        <span>Exceptional.</span>
-      </h2>
-
-      <p>
-        Have a residential, commercial or hospitality project?
-        Talk to Artiluxe Interiors about your vision.
-      </p>
-
-      <a href="mailto:info@artiluxeinteriors.com"
-         class="btn btn-primary">
-        Request a Consultation
-      </a>
-
-    </div>
-
-  </section>
-
-
-  <!-- ================= FOOTER ================= -->
-
-  <footer>
-
-    <div class="footer-grid">
-
-      <div class="footer-about">
-
-        <img
-          src="artiluxe logo black bg.jpeg"
-          alt="Artiluxe Interiors"
-          class="footer-logo"
+            class="logo"
         >
+    </a>
 
-        <p>
-          Where Art Meets Luxury.
-          Premium interior solutions and luxury wall panels
-          crafted for extraordinary spaces.
-        </p>
-
-      </div>
-
-
-      <div class="footer-column">
-
-        <h3>Navigation</h3>
-
+    <nav>
         <a href="#home">Home</a>
         <a href="#about">About</a>
         <a href="#services">Services</a>
-        <a href="#panels">Wall Panels</a>
         <a href="#contact">Contact</a>
+    </nav>
 
-      </div>
+</header>
 
 
-      <div class="footer-column">
+<!-- HERO -->
+<section class="hero" id="home">
 
-        <h3>Services</h3>
+    <div class="hero-content">
 
-        <a href="#services">Luxury Interiors</a>
-        <a href="#services">Wall Panels</a>
-        <a href="#services">Feature Walls</a>
-        <a href="#services">Residential</a>
-        <a href="#services">Commercial</a>
-        <a href="#services">Hospitality</a>
+        <h1>
+            Where <span>Art</span><br>
+            Meets Luxury.
+        </h1>
 
-      </div>
+        <p class="hero-text">
+            Premium interior solutions and luxury wall panels designed
+            to transform ordinary spaces into extraordinary environments.
+        </p>
+
+        <div class="hero-buttons">
+
+            <a href="#services" class="btn-primary">
+                Explore Our Services
+            </a>
+
+            <a href="#contact" class="btn-secondary">
+                Start Your Project
+            </a>
+
+        </div>
 
     </div>
 
+</section>
 
-    <div class="copyright">
 
-      © 2026 Artiluxe Interiors. All Rights Reserved.
+<!-- ABOUT -->
+<section class="content-section" id="about">
+
+    <h2 class="section-title">
+        About <span>Artiluxe</span>
+    </h2>
+
+    <p class="section-text">
+        Artiluxe Interiors brings together artistic design, premium
+        materials and modern interior solutions to create sophisticated
+        spaces that reflect individuality and luxury.
+    </p>
+
+</section>
+
+
+<!-- SERVICES -->
+<section class="content-section" id="services">
+
+    <h2 class="section-title">
+        Our <span>Services</span>
+    </h2>
+
+    <p class="section-text">
+        Elegant interior solutions created for residential,
+        commercial and hospitality spaces.
+    </p>
+
+    <div class="services">
+
+        <div class="service-card">
+            <h3>Luxury Wall Panels</h3>
+            <p>
+                Premium decorative wall panels designed to give interiors
+                a distinctive luxury finish.
+            </p>
+        </div>
+
+        <div class="service-card">
+            <h3>Interior Design</h3>
+            <p>
+                Sophisticated interior concepts combining functionality,
+                elegance and contemporary design.
+            </p>
+        </div>
+
+        <div class="service-card">
+            <h3>Custom Solutions</h3>
+            <p>
+                Bespoke interior solutions developed around your space,
+                style and vision.
+            </p>
+        </div>
 
     </div>
 
-  </footer>
+</section>
 
+
+<!-- CONTACT -->
+<section class="content-section contact" id="contact">
+
+    <h2 class="section-title">
+        Start Your <span>Project</span>
+    </h2>
+
+    <p class="section-text">
+        Let us transform your space into something extraordinary.
+    </p>
+
+    <div class="contact-box">
+
+        <p><strong>Artiluxe Interiors</strong></p>
+
+        <p>
+            Where Art Meets Luxury
+        </p>
+
+        <p>
+            Premium Interior Solutions & Luxury Wall Panels
+        </p>
+
+    </div>
+
+</section>
+
+
+<footer>
+
+    © 2026 Artiluxe Interiors. All Rights Reserved.
+
+</footer>
 
 </body>
 </html>
