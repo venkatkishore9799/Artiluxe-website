@@ -8,470 +8,453 @@
 
 <style>
 
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-html{
-    scroll-behavior:smooth;
+html {
+    scroll-behavior: smooth;
 }
 
-body{
-    background:#080808;
-    color:#fff;
-    font-family:Arial,Helvetica,sans-serif;
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #080808;
+    color: #ffffff;
+    line-height: 1.6;
 }
 
-/* COLORS */
+/* ================= HEADER ================= */
 
-:root{
-    --gold:#d4af37;
-    --gold-light:#f0d36b;
-    --black:#080808;
-    --dark:#111111;
+header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 100;
+    padding: 22px 6%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: linear-gradient(
+        to bottom,
+        rgba(0,0,0,0.85),
+        rgba(0,0,0,0)
+    );
 }
 
-/* HEADER */
-
-header{
-    position:absolute;
-    top:0;
-    left:0;
-    width:100%;
-    padding:20px 6%;
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-    z-index:100;
+.logo {
+    width: 155px;
+    height: auto;
 }
 
-.logo{
-    width:145px;
-    height:auto;
+nav {
+    display: flex;
+    gap: 35px;
 }
 
-nav{
-    display:flex;
-    gap:35px;
+nav a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 14px;
+    letter-spacing: 1px;
+    transition: 0.3s;
 }
 
-nav a{
-    color:#fff;
-    text-decoration:none;
-    font-size:14px;
-    letter-spacing:1px;
-    transition:.3s;
+nav a:hover {
+    color: #d4af37;
 }
 
-nav a:hover{
-    color:var(--gold);
+/* ================= HERO ================= */
+
+.hero {
+    min-height: 100vh;
+    display: grid;
+    grid-template-columns: 45% 55%;
+    align-items: center;
+    overflow: hidden;
 }
 
-/* HERO */
-
-.hero{
-    min-height:100vh;
-    padding:130px 6% 80px;
-    display:grid;
-    grid-template-columns:45% 55%;
-    align-items:center;
-    gap:45px;
-
-    background:
-    radial-gradient(
-        circle at 20% 50%,
-        rgba(212,175,55,.08),
-        transparent 35%
-    ),
-    #080808;
+.hero-content {
+    padding: 130px 8% 80px;
+    position: relative;
+    z-index: 5;
 }
 
-.hero-content{
-    max-width:600px;
+.small-title {
+    color: #d4af37;
+    font-size: 14px;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    margin-bottom: 18px;
 }
 
-.eyebrow{
-    color:var(--gold);
-    font-size:12px;
-    letter-spacing:5px;
-    margin-bottom:20px;
-    text-transform:uppercase;
+.hero h1 {
+    font-family: Georgia, serif;
+    font-size: clamp(42px, 5vw, 78px);
+    line-height: 0.95;
+    font-weight: 400;
+    letter-spacing: 3px;
+    margin-bottom: 22px;
 }
 
-.hero h1{
-    font-family:Georgia,"Times New Roman",serif;
-    font-size:clamp(50px,6vw,82px);
-    font-weight:500;
-    line-height:1;
-    margin-bottom:20px;
+.hero h1 span {
+    color: #d4af37;
 }
 
-.hero h1 span{
-    color:var(--gold);
+.tagline {
+    font-family: Georgia, serif;
+    color: #d4af37;
+    font-size: 21px;
+    font-style: italic;
+    margin-bottom: 25px;
 }
 
-.hero h2{
-    font-family:Georgia,"Times New Roman",serif;
-    font-size:25px;
-    font-weight:normal;
-    margin-bottom:25px;
+.hero-description {
+    color: #bdbdbd;
+    max-width: 500px;
+    font-size: 15px;
+    margin-bottom: 35px;
 }
 
-.hero p{
-    color:#bdbdbd;
-    font-size:16px;
-    line-height:1.8;
-    max-width:530px;
-    margin-bottom:35px;
+.buttons {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
 }
 
-.buttons{
-    display:flex;
-    gap:15px;
-    flex-wrap:wrap;
+.btn {
+    display: inline-block;
+    padding: 14px 25px;
+    text-decoration: none;
+    font-size: 13px;
+    letter-spacing: 1px;
+    transition: 0.3s;
 }
 
-.btn{
-    padding:14px 25px;
-    border:1px solid var(--gold);
-    color:white;
-    text-decoration:none;
-    font-size:14px;
-    transition:.3s;
+.btn-gold {
+    background: #d4af37;
+    color: #000000;
 }
 
-.btn.primary{
-    background:var(--gold);
-    color:#080808;
-    font-weight:bold;
+.btn-gold:hover {
+    background: #ffffff;
 }
 
-.btn:hover{
-    background:var(--gold);
-    color:#080808;
+.btn-outline {
+    border: 1px solid #d4af37;
+    color: #d4af37;
 }
 
-/* SLIDESHOW */
-
-.hero-gallery{
-    position:relative;
-    width:100%;
-    height:620px;
-    overflow:hidden;
-    border:1px solid rgba(212,175,55,.7);
-    box-shadow:
-        0 25px 70px rgba(0,0,0,.65),
-        0 0 40px rgba(212,175,55,.08);
+.btn-outline:hover {
+    background: #d4af37;
+    color: #000000;
 }
 
-.hero-gallery::before{
-    content:"";
-    position:absolute;
-    inset:12px;
-    border:1px solid rgba(212,175,55,.35);
-    z-index:20;
-    pointer-events:none;
+/* ================= IMAGE SLIDESHOW ================= */
+
+.hero-gallery {
+    position: relative;
+    height: 100vh;
+    min-height: 600px;
+    overflow: hidden;
+    background: #111111;
 }
 
-.slide{
-    position:absolute;
-    inset:0;
-    opacity:0;
-    transition:opacity 1.2s ease;
+.slide {
+    position: absolute;
+    inset: 0;
+    opacity: 0;
+    transition: opacity 1.2s ease-in-out;
 }
 
-.slide.active{
-    opacity:1;
+.slide.active {
+    opacity: 1;
 }
 
-.slide img{
-    width:100%;
-    height:100%;
-    object-fit:cover;
-    display:block;
+.slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
 }
 
-/* DARK OVERLAY */
+/* Dark luxury overlay */
 
-.hero-gallery::after{
-    content:"";
-    position:absolute;
-    inset:0;
+.hero-gallery::after {
+    content: "";
+    position: absolute;
+    inset: 0;
     background:
         linear-gradient(
-            to top,
-            rgba(0,0,0,.45),
-            transparent 45%
-        );
-    z-index:5;
-    pointer-events:none;
-}
-
-/* IMAGE LABEL */
-
-.gallery-label{
-    position:absolute;
-    left:28px;
-    bottom:55px;
-    z-index:30;
-    border-left:3px solid var(--gold);
-    padding-left:15px;
-}
-
-.gallery-label strong{
-    display:block;
-    color:var(--gold-light);
-    font-size:12px;
-    letter-spacing:3px;
-}
-
-.gallery-label span{
-    font-size:12px;
-    color:#ddd;
-}
-
-/* DOTS */
-
-.slider-dots{
-    position:absolute;
-    bottom:22px;
-    left:50%;
-    transform:translateX(-50%);
-    display:flex;
-    gap:9px;
-    z-index:30;
-}
-
-.dot{
-    width:8px;
-    height:8px;
-    border-radius:50%;
-    background:#777;
-    cursor:pointer;
-    transition:.3s;
-}
-
-.dot.active{
-    background:var(--gold);
-    transform:scale(1.4);
-}
-
-/* SECTIONS */
-
-section{
-    padding:100px 6%;
-}
-
-.section-heading{
-    text-align:center;
-    margin-bottom:55px;
-}
-
-.section-heading small{
-    color:var(--gold);
-    letter-spacing:4px;
-    font-size:12px;
-}
-
-.section-heading h2{
-    font-family:Georgia,"Times New Roman",serif;
-    font-size:45px;
-    font-weight:normal;
-    margin-top:10px;
-}
-
-/* SERVICES */
-
-.services{
-    background:#101010;
-}
-
-.services-grid{
-    max-width:1200px;
-    margin:auto;
-    display:grid;
-    grid-template-columns:repeat(3,1fr);
-    gap:25px;
-}
-
-.service{
-    background:#151515;
-    padding:40px 30px;
-    border:1px solid rgba(212,175,55,.15);
-    transition:.3s;
-}
-
-.service:hover{
-    transform:translateY(-8px);
-    border-color:var(--gold);
-}
-
-.service-number{
-    color:var(--gold);
-    font-family:Georgia,serif;
-    font-size:30px;
-    margin-bottom:20px;
-}
-
-.service h3{
-    font-family:Georgia,serif;
-    font-size:23px;
-    font-weight:normal;
-    margin-bottom:15px;
-}
-
-.service p{
-    color:#aaa;
-    font-size:14px;
-    line-height:1.7;
-}
-
-/* ABOUT */
-
-.about{
-    background:#080808;
-}
-
-.about-inner{
-    max-width:950px;
-    margin:auto;
-    text-align:center;
-}
-
-.about-inner p{
-    color:#bcbcbc;
-    font-size:17px;
-    line-height:1.9;
-    margin-bottom:20px;
-}
-
-/* CONTACT */
-
-.contact{
-    text-align:center;
-    background:
-        radial-gradient(
-            circle at center,
-            rgba(212,175,55,.08),
-            transparent 45%
+            90deg,
+            rgba(8,8,8,0.35),
+            rgba(8,8,8,0.05)
         ),
-        #0b0b0b;
+        linear-gradient(
+            0deg,
+            rgba(0,0,0,0.35),
+            transparent 35%
+        );
+    pointer-events: none;
 }
 
-.contact h2{
-    font-family:Georgia,serif;
-    font-size:48px;
-    font-weight:normal;
-    margin-bottom:20px;
+/* Gallery label */
+
+.gallery-label {
+    position: absolute;
+    left: 35px;
+    bottom: 70px;
+    z-index: 10;
+    color: white;
 }
 
-.contact p{
-    color:#aaa;
-    max-width:650px;
-    margin:0 auto 30px;
+.gallery-label strong {
+    display: block;
+    color: #d4af37;
+    font-size: 13px;
+    letter-spacing: 3px;
+    margin-bottom: 5px;
 }
 
-/* FOOTER */
-
-footer{
-    padding:30px 6%;
-    text-align:center;
-    background:#050505;
-    border-top:1px solid rgba(212,175,55,.2);
+.gallery-label span {
+    color: #eeeeee;
+    font-size: 12px;
+    letter-spacing: 1px;
 }
 
-footer p{
-    color:#777;
-    font-size:13px;
+/* Slider dots */
+
+.slider-dots {
+    position: absolute;
+    bottom: 35px;
+    right: 35px;
+    z-index: 20;
+    display: flex;
+    gap: 9px;
 }
 
-footer span{
-    color:var(--gold);
+.dot {
+    width: 9px;
+    height: 9px;
+    border-radius: 50%;
+    border: 1px solid #d4af37;
+    cursor: pointer;
+    transition: 0.3s;
 }
 
-/* TABLET */
-
-@media(max-width:1000px){
-
-    .hero{
-        grid-template-columns:1fr;
-        padding-top:140px;
-    }
-
-    .hero-content{
-        max-width:750px;
-    }
-
-    .hero-gallery{
-        height:550px;
-    }
-
-    .services-grid{
-        grid-template-columns:1fr 1fr;
-    }
+.dot.active {
+    background: #d4af37;
+    transform: scale(1.25);
 }
 
-/* MOBILE */
+/* ================= SECTIONS ================= */
 
-@media(max-width:650px){
+section {
+    padding: 100px 8%;
+}
 
-    header{
-        position:relative;
-        flex-direction:column;
-        gap:15px;
-        background:#080808;
+.section-title {
+    font-family: Georgia, serif;
+    font-size: 42px;
+    font-weight: 400;
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+.section-title span {
+    color: #d4af37;
+}
+
+.section-subtitle {
+    text-align: center;
+    color: #999999;
+    max-width: 650px;
+    margin: 0 auto 55px;
+}
+
+/* ================= SERVICES ================= */
+
+.services {
+    background: #0d0d0d;
+}
+
+.service-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.service-card {
+    border: 1px solid #292929;
+    padding: 40px 30px;
+    background: #111111;
+    transition: 0.4s;
+}
+
+.service-card:hover {
+    border-color: #d4af37;
+    transform: translateY(-5px);
+}
+
+.service-number {
+    color: #d4af37;
+    font-family: Georgia, serif;
+    font-size: 30px;
+    margin-bottom: 15px;
+}
+
+.service-card h3 {
+    font-family: Georgia, serif;
+    font-size: 23px;
+    font-weight: 400;
+    margin-bottom: 12px;
+}
+
+.service-card p {
+    color: #999999;
+    font-size: 14px;
+}
+
+/* ================= ABOUT ================= */
+
+.about {
+    background: #080808;
+}
+
+.about-content {
+    max-width: 900px;
+    margin: auto;
+    text-align: center;
+}
+
+.about-content p {
+    color: #b0b0b0;
+    margin-bottom: 18px;
+    font-size: 16px;
+}
+
+/* ================= CONTACT ================= */
+
+.contact {
+    background: #0d0d0d;
+    text-align: center;
+}
+
+.contact-box {
+    max-width: 700px;
+    margin: auto;
+    border: 1px solid #292929;
+    padding: 55px 30px;
+}
+
+.contact-box h2 {
+    font-family: Georgia, serif;
+    font-size: 38px;
+    font-weight: 400;
+    margin-bottom: 15px;
+}
+
+.contact-box h2 span {
+    color: #d4af37;
+}
+
+.contact-box p {
+    color: #999999;
+    margin-bottom: 30px;
+}
+
+/* ================= FOOTER ================= */
+
+footer {
+    padding: 30px 8%;
+    text-align: center;
+    background: #050505;
+    border-top: 1px solid #222222;
+}
+
+footer p {
+    color: #777777;
+    font-size: 12px;
+    letter-spacing: 1px;
+}
+
+footer span {
+    color: #d4af37;
+}
+
+/* ================= MOBILE ================= */
+
+@media (max-width: 900px) {
+
+    header {
+        padding: 18px 5%;
     }
 
-    nav{
-        gap:18px;
+    .logo {
+        width: 125px;
     }
 
-    nav a{
-        font-size:12px;
+    nav {
+        gap: 15px;
     }
 
-    .logo{
-        width:125px;
+    nav a {
+        font-size: 11px;
     }
 
-    .hero{
-        padding:75px 6% 60px;
-        gap:40px;
+    .hero {
+        grid-template-columns: 1fr;
     }
 
-    .hero h1{
-        font-size:52px;
+    .hero-content {
+        padding: 140px 7% 70px;
+        order: 1;
     }
 
-    .hero h2{
-        font-size:21px;
+    .hero-gallery {
+        height: 65vh;
+        min-height: 450px;
+        order: 2;
     }
 
-    .hero-gallery{
-        height:420px;
+    .hero h1 {
+        font-size: 48px;
     }
 
-    .services-grid{
-        grid-template-columns:1fr;
+    .service-grid {
+        grid-template-columns: 1fr;
     }
 
-    section{
-        padding:75px 6%;
+    section {
+        padding: 75px 7%;
     }
 
-    .section-heading h2,
-    .contact h2{
-        font-size:36px;
+}
+
+@media (max-width: 500px) {
+
+    nav {
+        display: none;
     }
 
-    .buttons{
-        flex-direction:column;
+    .hero h1 {
+        font-size: 42px;
     }
 
-    .btn{
-        text-align:center;
+    .tagline {
+        font-size: 18px;
+    }
+
+    .gallery-label {
+        left: 20px;
+        bottom: 60px;
+    }
+
+    .slider-dots {
+        right: 20px;
+        bottom: 25px;
     }
 
 }
@@ -481,242 +464,285 @@ footer span{
 
 <body>
 
-<!-- HEADER -->
+<!-- ================= HEADER ================= -->
 
 <header>
 
-<a href="#home">
-<img
-src="artiluxe%20logo%20black%20bg.jpeg"
-alt="Artiluxe Interiors"
-class="logo">
-</a>
+    <a href="#home">
+        <img
+            class="logo"
+            src="artiluxe%20logo%20black%20bg.jpeg"
+            alt="Artiluxe Interiors Logo"
+        >
+    </a>
 
-<nav>
-<a href="#home">Home</a>
-<a href="#about">About</a>
-<a href="#services">Services</a>
-<a href="#contact">Contact</a>
-</nav>
+    <nav>
+        <a href="#home">HOME</a>
+        <a href="#about">ABOUT</a>
+        <a href="#services">SERVICES</a>
+        <a href="#contact">CONTACT</a>
+    </nav>
 
 </header>
 
 
-<!-- HERO -->
+<!-- ================= HERO ================= -->
 
 <section class="hero" id="home">
 
-<div class="hero-content">
+    <div class="hero-content">
 
-<div class="eyebrow">
-Interior Design & Architectural Finishes
-</div>
+        <div class="small-title">
+            Interior Design & Architectural Finishes
+        </div>
 
-<h1>
-ARTI<span>LUXE</span>
-</h1>
+        <h1>
+            <span>ARTILUXE</span><br>
+            INTERIORS
+        </h1>
 
-<h2>
-Where Art Meets Luxury.
-</h2>
+        <div class="tagline">
+            Where Art Meets Luxury.
+        </div>
 
-<p>
-Transforming ordinary spaces into extraordinary experiences
-through sophisticated design, premium finishes and artistic
-architectural details.
-</p>
+        <p class="hero-description">
+            We create sophisticated interiors that combine
+            artistic expression, premium materials and
+            timeless architectural design.
+        </p>
 
-<div class="buttons">
+        <div class="buttons">
 
-<a href="#services" class="btn primary">
-Explore Our Services
-</a>
+            <a href="#services" class="btn btn-gold">
+                EXPLORE OUR SERVICES
+            </a>
 
-<a href="#contact" class="btn">
-Start Your Project
-</a>
+            <a href="#contact" class="btn btn-outline">
+                START YOUR PROJECT
+            </a>
 
-</div>
+        </div>
 
-</div>
-
-
-<!-- IMAGE SLIDESHOW -->
-
-<div class="hero-gallery">
-
-<div class="slide active">
-<img
-src="artiluxe-interior-1.jpg"
-alt="Luxury Artiluxe interior">
-</div>
-
-<div class="slide">
-<img
-src="artiluxe-interior-2.jpg"
-alt="Luxury interior wall design">
-</div>
-
-<div class="slide">
-<img
-src="artiluxe-interior-3.jpg"
-alt="Luxury TV wall interior">
-</div>
-
-<div class="slide">
-<img
-src="artiluxe-interior-4.jpg"
-alt="Luxury marble interior">
-</div>
+    </div>
 
 
-<div class="gallery-label">
+    <!-- ================= SLIDESHOW ================= -->
 
-<strong>ARTILUXE INTERIORS</strong>
+    <div class="hero-gallery">
 
-<span>
-Luxury • Texture • Architecture
-</span>
+        <div class="slide active">
+            <img
+                src="artiluxe-interior-1.jpg"
+                alt="Luxury Artiluxe interior"
+            >
+        </div>
 
-</div>
+        <div class="slide">
+            <img
+                src="artiluxe-interior-2.jpg"
+                alt="Luxury interior wall design"
+            >
+        </div>
+
+        <div class="slide">
+            <img
+                src="artiluxe-interior-3.jpg"
+                alt="Luxury TV wall interior"
+            >
+        </div>
+
+        <div class="slide">
+            <img
+                src="artiluxe-interior-4.jpg"
+                alt="Luxury marble interior"
+            >
+        </div>
 
 
-<div class="slider-dots">
+        <div class="gallery-label">
 
-<div class="dot active" onclick="showSlide(0)"></div>
-<div class="dot" onclick="showSlide(1)"></div>
-<div class="dot" onclick="showSlide(2)"></div>
-<div class="dot" onclick="showSlide(3)"></div>
+            <strong>ARTILUXE INTERIORS</strong>
 
-</div>
+            <span>
+                Luxury • Texture • Architecture
+            </span>
 
-</div>
+        </div>
+
+
+        <div class="slider-dots">
+
+            <div
+                class="dot active"
+                onclick="showSlide(0)"
+            ></div>
+
+            <div
+                class="dot"
+                onclick="showSlide(1)"
+            ></div>
+
+            <div
+                class="dot"
+                onclick="showSlide(2)"
+            ></div>
+
+            <div
+                class="dot"
+                onclick="showSlide(3)"
+            ></div>
+
+        </div>
+
+    </div>
 
 </section>
 
 
-<!-- SERVICES -->
+<!-- ================= SERVICES ================= -->
 
 <section class="services" id="services">
 
-<div class="section-heading">
+    <h2 class="section-title">
+        Our <span>Services</span>
+    </h2>
 
-<small>WHAT WE CREATE</small>
-
-<h2>Our Services</h2>
-
-</div>
-
-<div class="services-grid">
-
-<div class="service">
-
-<div class="service-number">01</div>
-
-<h3>Interior Design</h3>
-
-<p>
-Elegant and contemporary interior concepts designed
-around your lifestyle, space and personality.
-</p>
-
-</div>
+    <p class="section-subtitle">
+        Premium interior solutions designed to transform
+        spaces into refined expressions of art and luxury.
+    </p>
 
 
-<div class="service">
+    <div class="service-grid">
 
-<div class="service-number">02</div>
+        <div class="service-card">
 
-<h3>Wall Panels</h3>
+            <div class="service-number">
+                01
+            </div>
 
-<p>
-Statement wall panels, textures and decorative surfaces
-that transform walls into works of art.
-</p>
+            <h3>
+                Interior Design
+            </h3>
 
-</div>
+            <p>
+                Bespoke residential and commercial interiors
+                created around your lifestyle, vision and
+                architectural character.
+            </p>
+
+        </div>
 
 
-<div class="service">
+        <div class="service-card">
 
-<div class="service-number">03</div>
+            <div class="service-number">
+                02
+            </div>
 
-<h3>Luxury Finishes</h3>
+            <h3>
+                Wall Panels & Finishes
+            </h3>
 
-<p>
-Premium architectural finishes and carefully selected
-materials for a refined luxury appearance.
-</p>
+            <p>
+                Premium decorative wall panels, textures,
+                marble finishes and architectural surfaces
+                that create distinctive interiors.
+            </p>
 
-</div>
+        </div>
 
-</div>
+
+        <div class="service-card">
+
+            <div class="service-number">
+                03
+            </div>
+
+            <h3>
+                Luxury Interiors
+            </h3>
+
+            <p>
+                Complete luxury interior solutions combining
+                materials, lighting, furniture and finishes
+                into one elegant design language.
+            </p>
+
+        </div>
+
+    </div>
 
 </section>
 
 
-<!-- ABOUT -->
+<!-- ================= ABOUT ================= -->
 
 <section class="about" id="about">
 
-<div class="section-heading">
+    <div class="about-content">
 
-<small>THE ARTILUXE PHILOSOPHY</small>
+        <h2 class="section-title">
+            About <span>Artiluxe</span>
+        </h2>
 
-<h2>Designed Beyond Ordinary</h2>
+        <p>
+            Artiluxe Interiors brings together art,
+            architecture and luxury to create memorable
+            spaces.
+        </p>
 
-</div>
+        <p>
+            From feature walls and architectural finishes
+            to complete interior concepts, our approach
+            focuses on premium aesthetics, craftsmanship
+            and timeless design.
+        </p>
 
-<div class="about-inner">
-
-<p>
-Artiluxe Interiors brings together art, architecture
-and craftsmanship to create distinctive spaces.
-</p>
-
-<p>
-From feature walls and decorative panels to complete
-interior concepts, every detail is designed to create
-an atmosphere that feels timeless, sophisticated and
-uniquely yours.
-</p>
-
-</div>
+    </div>
 
 </section>
 
 
-<!-- CONTACT -->
+<!-- ================= CONTACT ================= -->
 
 <section class="contact" id="contact">
 
-<h2>
-Let's Create Something Exceptional.
-</h2>
+    <div class="contact-box">
 
-<p>
-Have a project in mind? Let's transform your space
-into something truly remarkable.
-</p>
+        <h2>
+            Start Your <span>Project</span>
+        </h2>
 
-<a href="#home" class="btn primary">
-Begin Your Project
-</a>
+        <p>
+            Let's create a space where art meets luxury.
+        </p>
+
+        <a
+            href="mailto:info@artiluxeinteriors.com"
+            class="btn btn-gold"
+        >
+            CONTACT ARTILUXE
+        </a>
+
+    </div>
 
 </section>
 
 
-<!-- FOOTER -->
+<!-- ================= FOOTER ================= -->
 
 <footer>
 
-<p>
-© 2026 <span>Artiluxe Interiors</span>.
-Where Art Meets Luxury.
-</p>
+    <p>
+        © 2026 <span>ARTILUXE INTERIORS</span>.
+        Where Art Meets Luxury.
+    </p>
 
 </footer>
 
+
+<!-- ================= SLIDESHOW SCRIPT ================= -->
 
 <script>
 
@@ -725,7 +751,8 @@ let currentSlide = 0;
 const slides = document.querySelectorAll(".slide");
 const dots = document.querySelectorAll(".dot");
 
-function showSlide(index){
+
+function showSlide(index) {
 
     slides[currentSlide].classList.remove("active");
     dots[currentSlide].classList.remove("active");
@@ -736,14 +763,18 @@ function showSlide(index){
     dots[currentSlide].classList.add("active");
 }
 
-function nextSlide(){
 
-    let next = (currentSlide + 1) % slides.length;
+function nextSlide() {
+
+    let next =
+        (currentSlide + 1) % slides.length;
 
     showSlide(next);
+
 }
 
-setInterval(nextSlide,5000);
+
+setInterval(nextSlide, 5000);
 
 </script>
 
