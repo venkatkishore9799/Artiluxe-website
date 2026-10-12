@@ -6,425 +6,474 @@
 
 <title>Artiluxe Interiors | Where Art Meets Luxury</title>
 
-<meta name="description" content="Artiluxe Interiors - Where Art Meets Luxury. Premium interior design, wall panels and architectural finishes.">
-
 <style>
 
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
 }
 
-html {
-    scroll-behavior: smooth;
+html{
+    scroll-behavior:smooth;
 }
 
-body {
-    font-family: Arial, Helvetica, sans-serif;
-    background: #080808;
-    color: #ffffff;
-    line-height: 1.6;
+body{
+    background:#080808;
+    color:#fff;
+    font-family:Arial,Helvetica,sans-serif;
 }
 
-/* GOLD */
-:root {
-    --gold: #d4af37;
-    --dark-gold: #a98620;
-    --black: #080808;
-    --soft-black: #111111;
+/* COLORS */
+
+:root{
+    --gold:#d4af37;
+    --gold-light:#f0d36b;
+    --black:#080808;
+    --dark:#111111;
 }
 
 /* HEADER */
 
-header {
-    width: 100%;
-    padding: 18px 6%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: 100;
+header{
+    position:absolute;
+    top:0;
+    left:0;
+    width:100%;
+    padding:20px 6%;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    z-index:100;
 }
 
-.logo {
-    width: 145px;
-    height: auto;
-    display: block;
+.logo{
+    width:145px;
+    height:auto;
 }
 
-nav {
-    display: flex;
-    gap: 35px;
+nav{
+    display:flex;
+    gap:35px;
 }
 
-nav a {
-    color: #ffffff;
-    text-decoration: none;
-    font-size: 14px;
-    letter-spacing: 1px;
-    transition: 0.3s;
+nav a{
+    color:#fff;
+    text-decoration:none;
+    font-size:14px;
+    letter-spacing:1px;
+    transition:.3s;
 }
 
-nav a:hover {
-    color: var(--gold);
+nav a:hover{
+    color:var(--gold);
 }
 
 /* HERO */
 
-.hero {
-    min-height: 100vh;
-    padding: 140px 6% 80px;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 70px;
-    align-items: center;
+.hero{
+    min-height:100vh;
+    padding:130px 6% 80px;
+    display:grid;
+    grid-template-columns:45% 55%;
+    align-items:center;
+    gap:45px;
+
     background:
-        radial-gradient(circle at 15% 40%, rgba(212,175,55,0.08), transparent 30%),
-        #080808;
+    radial-gradient(
+        circle at 20% 50%,
+        rgba(212,175,55,.08),
+        transparent 35%
+    ),
+    #080808;
 }
 
-.hero-content {
-    max-width: 650px;
+.hero-content{
+    max-width:600px;
 }
 
-.small-title {
-    color: var(--gold);
-    font-size: 13px;
-    letter-spacing: 5px;
-    margin-bottom: 18px;
-    text-transform: uppercase;
+.eyebrow{
+    color:var(--gold);
+    font-size:12px;
+    letter-spacing:5px;
+    margin-bottom:20px;
+    text-transform:uppercase;
 }
 
-.hero h1 {
-    font-family: Georgia, "Times New Roman", serif;
-    font-size: clamp(45px, 6vw, 78px);
-    line-height: 1.05;
-    font-weight: 500;
-    margin-bottom: 20px;
+.hero h1{
+    font-family:Georgia,"Times New Roman",serif;
+    font-size:clamp(50px,6vw,82px);
+    font-weight:500;
+    line-height:1;
+    margin-bottom:20px;
 }
 
-.hero h1 span {
-    color: var(--gold);
+.hero h1 span{
+    color:var(--gold);
 }
 
-.hero h2 {
-    font-family: Georgia, "Times New Roman", serif;
-    font-size: 25px;
-    font-weight: normal;
-    color: #eeeeee;
-    margin-bottom: 25px;
+.hero h2{
+    font-family:Georgia,"Times New Roman",serif;
+    font-size:25px;
+    font-weight:normal;
+    margin-bottom:25px;
 }
 
-.hero p {
-    color: #bdbdbd;
-    max-width: 560px;
-    font-size: 16px;
-    margin-bottom: 35px;
+.hero p{
+    color:#bdbdbd;
+    font-size:16px;
+    line-height:1.8;
+    max-width:530px;
+    margin-bottom:35px;
 }
 
-.buttons {
-    display: flex;
-    gap: 16px;
-    flex-wrap: wrap;
+.buttons{
+    display:flex;
+    gap:15px;
+    flex-wrap:wrap;
 }
 
-.btn {
-    display: inline-block;
-    padding: 14px 26px;
-    border: 1px solid var(--gold);
-    text-decoration: none;
-    color: #ffffff;
-    font-size: 14px;
-    letter-spacing: 0.5px;
-    transition: 0.3s;
+.btn{
+    padding:14px 25px;
+    border:1px solid var(--gold);
+    color:white;
+    text-decoration:none;
+    font-size:14px;
+    transition:.3s;
 }
 
-.btn.primary {
-    background: var(--gold);
-    color: #080808;
-    font-weight: bold;
+.btn.primary{
+    background:var(--gold);
+    color:#080808;
+    font-weight:bold;
 }
 
-.btn:hover {
-    background: var(--gold);
-    color: #080808;
+.btn:hover{
+    background:var(--gold);
+    color:#080808;
 }
 
-/* HERO IMAGE */
+/* SLIDESHOW */
 
-.hero-image {
-    position: relative;
-    width: 100%;
-    max-width: 600px;
-    justify-self: end;
+.hero-gallery{
+    position:relative;
+    width:100%;
+    height:620px;
+    overflow:hidden;
+    border:1px solid rgba(212,175,55,.7);
+    box-shadow:
+        0 25px 70px rgba(0,0,0,.65),
+        0 0 40px rgba(212,175,55,.08);
 }
 
-.hero-image::before {
-    content: "";
-    position: absolute;
-    top: -18px;
-    right: -18px;
-    width: 90%;
-    height: 90%;
-    border: 1px solid rgba(212,175,55,0.5);
-    z-index: 0;
+.hero-gallery::before{
+    content:"";
+    position:absolute;
+    inset:12px;
+    border:1px solid rgba(212,175,55,.35);
+    z-index:20;
+    pointer-events:none;
 }
 
-.hero-image img {
-    position: relative;
-    z-index: 2;
-    width: 100%;
-    height: 600px;
-    object-fit: cover;
-    object-position: center;
-    display: block;
-    border: 1px solid rgba(212,175,55,0.7);
-    box-shadow: 0 30px 80px rgba(0,0,0,0.7);
+.slide{
+    position:absolute;
+    inset:0;
+    opacity:0;
+    transition:opacity 1.2s ease;
 }
 
-.image-label {
-    position: absolute;
-    bottom: 22px;
-    left: 22px;
-    z-index: 5;
-    background: rgba(8,8,8,0.88);
-    border-left: 3px solid var(--gold);
-    padding: 12px 18px;
+.slide.active{
+    opacity:1;
 }
 
-.image-label strong {
-    display: block;
-    color: var(--gold);
-    font-size: 12px;
-    letter-spacing: 2px;
+.slide img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    display:block;
 }
 
-.image-label span {
-    color: #ffffff;
-    font-size: 11px;
+/* DARK OVERLAY */
+
+.hero-gallery::after{
+    content:"";
+    position:absolute;
+    inset:0;
+    background:
+        linear-gradient(
+            to top,
+            rgba(0,0,0,.45),
+            transparent 45%
+        );
+    z-index:5;
+    pointer-events:none;
+}
+
+/* IMAGE LABEL */
+
+.gallery-label{
+    position:absolute;
+    left:28px;
+    bottom:55px;
+    z-index:30;
+    border-left:3px solid var(--gold);
+    padding-left:15px;
+}
+
+.gallery-label strong{
+    display:block;
+    color:var(--gold-light);
+    font-size:12px;
+    letter-spacing:3px;
+}
+
+.gallery-label span{
+    font-size:12px;
+    color:#ddd;
+}
+
+/* DOTS */
+
+.slider-dots{
+    position:absolute;
+    bottom:22px;
+    left:50%;
+    transform:translateX(-50%);
+    display:flex;
+    gap:9px;
+    z-index:30;
+}
+
+.dot{
+    width:8px;
+    height:8px;
+    border-radius:50%;
+    background:#777;
+    cursor:pointer;
+    transition:.3s;
+}
+
+.dot.active{
+    background:var(--gold);
+    transform:scale(1.4);
 }
 
 /* SECTIONS */
 
-section {
-    padding: 100px 6%;
+section{
+    padding:100px 6%;
 }
 
-.section-title {
-    text-align: center;
-    margin-bottom: 55px;
+.section-heading{
+    text-align:center;
+    margin-bottom:55px;
 }
 
-.section-title small {
-    color: var(--gold);
-    letter-spacing: 4px;
-    font-size: 12px;
+.section-heading small{
+    color:var(--gold);
+    letter-spacing:4px;
+    font-size:12px;
 }
 
-.section-title h2 {
-    font-family: Georgia, "Times New Roman", serif;
-    font-size: 45px;
-    font-weight: 500;
-    margin-top: 10px;
+.section-heading h2{
+    font-family:Georgia,"Times New Roman",serif;
+    font-size:45px;
+    font-weight:normal;
+    margin-top:10px;
 }
 
 /* SERVICES */
 
-.services {
-    background: #0d0d0d;
+.services{
+    background:#101010;
 }
 
-.service-grid {
-    max-width: 1200px;
-    margin: auto;
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 25px;
+.services-grid{
+    max-width:1200px;
+    margin:auto;
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:25px;
 }
 
-.service-card {
-    padding: 40px 30px;
-    background: #141414;
-    border: 1px solid rgba(212,175,55,0.18);
-    transition: 0.3s;
+.service{
+    background:#151515;
+    padding:40px 30px;
+    border:1px solid rgba(212,175,55,.15);
+    transition:.3s;
 }
 
-.service-card:hover {
-    transform: translateY(-8px);
-    border-color: rgba(212,175,55,0.65);
+.service:hover{
+    transform:translateY(-8px);
+    border-color:var(--gold);
 }
 
-.service-number {
-    color: var(--gold);
-    font-family: Georgia, serif;
-    font-size: 30px;
-    margin-bottom: 20px;
+.service-number{
+    color:var(--gold);
+    font-family:Georgia,serif;
+    font-size:30px;
+    margin-bottom:20px;
 }
 
-.service-card h3 {
-    font-family: Georgia, serif;
-    font-size: 23px;
-    font-weight: normal;
-    margin-bottom: 15px;
+.service h3{
+    font-family:Georgia,serif;
+    font-size:23px;
+    font-weight:normal;
+    margin-bottom:15px;
 }
 
-.service-card p {
-    color: #aaa;
-    font-size: 14px;
+.service p{
+    color:#aaa;
+    font-size:14px;
+    line-height:1.7;
 }
 
 /* ABOUT */
 
-.about {
-    background: #080808;
+.about{
+    background:#080808;
 }
 
-.about-content {
-    max-width: 1050px;
-    margin: auto;
-    text-align: center;
+.about-inner{
+    max-width:950px;
+    margin:auto;
+    text-align:center;
 }
 
-.about-content p {
-    color: #bcbcbc;
-    font-size: 17px;
-    margin-bottom: 20px;
+.about-inner p{
+    color:#bcbcbc;
+    font-size:17px;
+    line-height:1.9;
+    margin-bottom:20px;
 }
 
 /* CONTACT */
 
-.contact {
+.contact{
+    text-align:center;
     background:
-        linear-gradient(rgba(8,8,8,0.92), rgba(8,8,8,0.96)),
-        url("https://images.pexels.com/photos/11540683/pexels-photo-11540683.jpeg?cs=srgb&dl=pexels-eg0r9-11540683.jpg&fm=jpg");
-    background-size: cover;
-    background-position: center;
-    text-align: center;
+        radial-gradient(
+            circle at center,
+            rgba(212,175,55,.08),
+            transparent 45%
+        ),
+        #0b0b0b;
 }
 
-.contact h2 {
-    font-family: Georgia, serif;
-    font-size: 48px;
-    font-weight: normal;
-    margin-bottom: 20px;
+.contact h2{
+    font-family:Georgia,serif;
+    font-size:48px;
+    font-weight:normal;
+    margin-bottom:20px;
 }
 
-.contact p {
-    color: #c0c0c0;
-    max-width: 650px;
-    margin: 0 auto 30px;
+.contact p{
+    color:#aaa;
+    max-width:650px;
+    margin:0 auto 30px;
 }
 
 /* FOOTER */
 
-footer {
-    padding: 30px 6%;
-    text-align: center;
-    background: #050505;
-    border-top: 1px solid rgba(212,175,55,0.2);
+footer{
+    padding:30px 6%;
+    text-align:center;
+    background:#050505;
+    border-top:1px solid rgba(212,175,55,.2);
 }
 
-footer p {
-    color: #777;
-    font-size: 13px;
+footer p{
+    color:#777;
+    font-size:13px;
 }
 
-footer span {
-    color: var(--gold);
+footer span{
+    color:var(--gold);
+}
+
+/* TABLET */
+
+@media(max-width:1000px){
+
+    .hero{
+        grid-template-columns:1fr;
+        padding-top:140px;
+    }
+
+    .hero-content{
+        max-width:750px;
+    }
+
+    .hero-gallery{
+        height:550px;
+    }
+
+    .services-grid{
+        grid-template-columns:1fr 1fr;
+    }
 }
 
 /* MOBILE */
 
-@media (max-width: 900px) {
+@media(max-width:650px){
 
-    header {
-        padding: 18px 5%;
+    header{
+        position:relative;
+        flex-direction:column;
+        gap:15px;
+        background:#080808;
     }
 
-    nav {
-        gap: 15px;
+    nav{
+        gap:18px;
     }
 
-    nav a {
-        font-size: 12px;
+    nav a{
+        font-size:12px;
     }
 
-    .hero {
-        grid-template-columns: 1fr;
-        padding-top: 130px;
+    .logo{
+        width:125px;
     }
 
-    .hero-image {
-        justify-self: center;
-        max-width: 650px;
+    .hero{
+        padding:75px 6% 60px;
+        gap:40px;
     }
 
-    .hero-image img {
-        height: 500px;
+    .hero h1{
+        font-size:52px;
     }
 
-    .service-grid {
-        grid-template-columns: 1fr;
-    }
-}
-
-@media (max-width: 600px) {
-
-    header {
-        position: relative;
-        background: #080808;
-        flex-direction: column;
-        gap: 15px;
+    .hero h2{
+        font-size:21px;
     }
 
-    .logo {
-        width: 125px;
+    .hero-gallery{
+        height:420px;
     }
 
-    nav {
-        gap: 18px;
+    .services-grid{
+        grid-template-columns:1fr;
     }
 
-    .hero {
-        padding: 80px 6% 60px;
+    section{
+        padding:75px 6%;
     }
 
-    .hero h1 {
-        font-size: 48px;
+    .section-heading h2,
+    .contact h2{
+        font-size:36px;
     }
 
-    .hero h2 {
-        font-size: 21px;
+    .buttons{
+        flex-direction:column;
     }
 
-    .hero-image img {
-        height: 420px;
+    .btn{
+        text-align:center;
     }
 
-    .hero-image::before {
-        top: -10px;
-        right: -10px;
-    }
-
-    section {
-        padding: 75px 6%;
-    }
-
-    .section-title h2,
-    .contact h2 {
-        font-size: 36px;
-    }
-
-    .buttons {
-        flex-direction: column;
-    }
-
-    .btn {
-        text-align: center;
-    }
 }
 
 </style>
@@ -432,22 +481,23 @@ footer span {
 
 <body>
 
+<!-- HEADER -->
+
 <header>
 
-    <a href="#home">
-        <img
-            src="artiluxe%20logo%20black%20bg.jpeg"
-            alt="Artiluxe Interiors"
-            class="logo"
-        >
-    </a>
+<a href="#home">
+<img
+src="artiluxe%20logo%20black%20bg.jpeg"
+alt="Artiluxe Interiors"
+class="logo">
+</a>
 
-    <nav>
-        <a href="#home">Home</a>
-        <a href="#about">About</a>
-        <a href="#services">Services</a>
-        <a href="#contact">Contact</a>
-    </nav>
+<nav>
+<a href="#home">Home</a>
+<a href="#about">About</a>
+<a href="#services">Services</a>
+<a href="#contact">Contact</a>
+</nav>
 
 </header>
 
@@ -456,52 +506,91 @@ footer span {
 
 <section class="hero" id="home">
 
-    <div class="hero-content">
+<div class="hero-content">
 
-        <div class="small-title">
-            Interior Design & Architectural Finishes
-        </div>
+<div class="eyebrow">
+Interior Design & Architectural Finishes
+</div>
 
-        <h1>
-            ARTI<span>LUXE</span>
-        </h1>
+<h1>
+ARTI<span>LUXE</span>
+</h1>
 
-        <h2>
-            Where Art Meets Luxury.
-        </h2>
+<h2>
+Where Art Meets Luxury.
+</h2>
 
-        <p>
-            Transforming ordinary spaces into extraordinary experiences
-            through sophisticated design, premium finishes and artistic
-            architectural details.
-        </p>
+<p>
+Transforming ordinary spaces into extraordinary experiences
+through sophisticated design, premium finishes and artistic
+architectural details.
+</p>
 
-        <div class="buttons">
-            <a href="#services" class="btn primary">
-                Explore Our Services
-            </a>
+<div class="buttons">
 
-            <a href="#contact" class="btn">
-                Start Your Project
-            </a>
-        </div>
+<a href="#services" class="btn primary">
+Explore Our Services
+</a>
 
-    </div>
+<a href="#contact" class="btn">
+Start Your Project
+</a>
+
+</div>
+
+</div>
 
 
-    <div class="hero-image">
+<!-- IMAGE SLIDESHOW -->
 
-        <img
-            src="https://images.pexels.com/photos/11540683/pexels-photo-11540683.jpeg?cs=srgb&dl=pexels-eg0r9-11540683.jpg&fm=jpg"
-            alt="Luxury black and gold decorative wall"
-        >
+<div class="hero-gallery">
 
-        <div class="image-label">
-            <strong>LUXURY WALL DESIGN</strong>
-            <span>Art • Texture • Architecture</span>
-        </div>
+<div class="slide active">
+<img
+src="artiluxe-interior-1.jpg"
+alt="Luxury Artiluxe interior">
+</div>
 
-    </div>
+<div class="slide">
+<img
+src="artiluxe-interior-2.jpg"
+alt="Luxury interior wall design">
+</div>
+
+<div class="slide">
+<img
+src="artiluxe-interior-3.jpg"
+alt="Luxury TV wall interior">
+</div>
+
+<div class="slide">
+<img
+src="artiluxe-interior-4.jpg"
+alt="Luxury marble interior">
+</div>
+
+
+<div class="gallery-label">
+
+<strong>ARTILUXE INTERIORS</strong>
+
+<span>
+Luxury • Texture • Architecture
+</span>
+
+</div>
+
+
+<div class="slider-dots">
+
+<div class="dot active" onclick="showSlide(0)"></div>
+<div class="dot" onclick="showSlide(1)"></div>
+<div class="dot" onclick="showSlide(2)"></div>
+<div class="dot" onclick="showSlide(3)"></div>
+
+</div>
+
+</div>
 
 </section>
 
@@ -510,41 +599,58 @@ footer span {
 
 <section class="services" id="services">
 
-    <div class="section-title">
-        <small>WHAT WE CREATE</small>
-        <h2>Our Services</h2>
-    </div>
+<div class="section-heading">
 
-    <div class="service-grid">
+<small>WHAT WE CREATE</small>
 
-        <div class="service-card">
-            <div class="service-number">01</div>
-            <h3>Interior Design</h3>
-            <p>
-                Elegant and contemporary interior concepts designed
-                around your lifestyle, space and personality.
-            </p>
-        </div>
+<h2>Our Services</h2>
 
-        <div class="service-card">
-            <div class="service-number">02</div>
-            <h3>Wall Panels</h3>
-            <p>
-                Statement wall panels, textures and decorative surfaces
-                that transform walls into works of art.
-            </p>
-        </div>
+</div>
 
-        <div class="service-card">
-            <div class="service-number">03</div>
-            <h3>Luxury Finishes</h3>
-            <p>
-                Premium architectural finishes and carefully selected
-                materials for a refined luxury appearance.
-            </p>
-        </div>
+<div class="services-grid">
 
-    </div>
+<div class="service">
+
+<div class="service-number">01</div>
+
+<h3>Interior Design</h3>
+
+<p>
+Elegant and contemporary interior concepts designed
+around your lifestyle, space and personality.
+</p>
+
+</div>
+
+
+<div class="service">
+
+<div class="service-number">02</div>
+
+<h3>Wall Panels</h3>
+
+<p>
+Statement wall panels, textures and decorative surfaces
+that transform walls into works of art.
+</p>
+
+</div>
+
+
+<div class="service">
+
+<div class="service-number">03</div>
+
+<h3>Luxury Finishes</h3>
+
+<p>
+Premium architectural finishes and carefully selected
+materials for a refined luxury appearance.
+</p>
+
+</div>
+
+</div>
 
 </section>
 
@@ -553,25 +659,29 @@ footer span {
 
 <section class="about" id="about">
 
-    <div class="section-title">
-        <small>THE ARTILUXE PHILOSOPHY</small>
-        <h2>Designed Beyond Ordinary</h2>
-    </div>
+<div class="section-heading">
 
-    <div class="about-content">
+<small>THE ARTILUXE PHILOSOPHY</small>
 
-        <p>
-            Artiluxe Interiors brings together art, architecture and
-            craftsmanship to create distinctive spaces.
-        </p>
+<h2>Designed Beyond Ordinary</h2>
 
-        <p>
-            From feature walls and decorative panels to complete interior
-            concepts, every detail is designed to create an atmosphere
-            that feels timeless, sophisticated and uniquely yours.
-        </p>
+</div>
 
-    </div>
+<div class="about-inner">
+
+<p>
+Artiluxe Interiors brings together art, architecture
+and craftsmanship to create distinctive spaces.
+</p>
+
+<p>
+From feature walls and decorative panels to complete
+interior concepts, every detail is designed to create
+an atmosphere that feels timeless, sophisticated and
+uniquely yours.
+</p>
+
+</div>
 
 </section>
 
@@ -580,18 +690,18 @@ footer span {
 
 <section class="contact" id="contact">
 
-    <h2>
-        Let's Create Something Exceptional.
-    </h2>
+<h2>
+Let's Create Something Exceptional.
+</h2>
 
-    <p>
-        Have a project in mind? Let's transform your space into
-        something truly remarkable.
-    </p>
+<p>
+Have a project in mind? Let's transform your space
+into something truly remarkable.
+</p>
 
-    <a href="#home" class="btn primary">
-        Begin Your Project
-    </a>
+<a href="#home" class="btn primary">
+Begin Your Project
+</a>
 
 </section>
 
@@ -600,13 +710,42 @@ footer span {
 
 <footer>
 
-    <p>
-        © 2026 <span>Artiluxe Interiors</span>.
-        Where Art Meets Luxury.
-    </p>
+<p>
+© 2026 <span>Artiluxe Interiors</span>.
+Where Art Meets Luxury.
+</p>
 
 </footer>
 
+
+<script>
+
+let currentSlide = 0;
+
+const slides = document.querySelectorAll(".slide");
+const dots = document.querySelectorAll(".dot");
+
+function showSlide(index){
+
+    slides[currentSlide].classList.remove("active");
+    dots[currentSlide].classList.remove("active");
+
+    currentSlide = index;
+
+    slides[currentSlide].classList.add("active");
+    dots[currentSlide].classList.add("active");
+}
+
+function nextSlide(){
+
+    let next = (currentSlide + 1) % slides.length;
+
+    showSlide(next);
+}
+
+setInterval(nextSlide,5000);
+
+</script>
 
 </body>
 </html>
