@@ -7,6 +7,7 @@
 <title>Artiluxe Interiors | Where Art Meets Luxury</title>
 
 <style>
+
 * {
     margin: 0;
     padding: 0;
@@ -24,7 +25,7 @@ body {
     line-height: 1.6;
 }
 
-/* HEADER */
+/* ================= HEADER ================= */
 
 header {
     position: absolute;
@@ -50,7 +51,7 @@ header {
 
 nav {
     display: flex;
-    gap: 35px;
+    gap: 32px;
 }
 
 nav a {
@@ -65,20 +66,20 @@ nav a:hover {
     color: #d4af37;
 }
 
-/* HERO */
+/* ================= HERO ================= */
 
 .hero {
     min-height: 100vh;
     display: grid;
     grid-template-columns: 43% 57%;
-    align-items: center;
     overflow: hidden;
 }
 
 .hero-content {
-    padding: 130px 8% 80px;
-    position: relative;
-    z-index: 5;
+    padding: 170px 8% 80px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 .small-title {
@@ -151,7 +152,7 @@ nav a:hover {
     color: #000000;
 }
 
-/* IMAGE SLIDESHOW */
+/* ================= SLIDESHOW ================= */
 
 .hero-gallery {
     position: relative;
@@ -179,8 +180,6 @@ nav a:hover {
     display: block;
 }
 
-/* IMAGE OVERLAY */
-
 .hero-gallery::after {
     content: "";
     position: absolute;
@@ -199,7 +198,7 @@ nav a:hover {
     pointer-events: none;
 }
 
-/* IMAGE LABEL */
+/* ================= GALLERY LABEL ================= */
 
 .gallery-label {
     position: absolute;
@@ -219,10 +218,9 @@ nav a:hover {
 .gallery-label span {
     color: #ffffff;
     font-size: 12px;
-    letter-spacing: 1px;
 }
 
-/* DOTS */
+/* ================= DOTS ================= */
 
 .slider-dots {
     position: absolute;
@@ -239,7 +237,6 @@ nav a:hover {
     border-radius: 50%;
     border: 1px solid #d4af37;
     cursor: pointer;
-    transition: 0.3s;
 }
 
 .dot.active {
@@ -247,7 +244,7 @@ nav a:hover {
     transform: scale(1.3);
 }
 
-/* SECTIONS */
+/* ================= SECTIONS ================= */
 
 section {
     padding: 100px 8%;
@@ -272,7 +269,7 @@ section {
     margin: 0 auto 55px;
 }
 
-/* SERVICES */
+/* ================= SERVICES ================= */
 
 .services {
     background: #0d0d0d;
@@ -315,7 +312,7 @@ section {
     font-size: 14px;
 }
 
-/* ABOUT */
+/* ================= ABOUT ================= */
 
 .about {
     background: #080808;
@@ -333,7 +330,7 @@ section {
     font-size: 16px;
 }
 
-/* CONTACT */
+/* ================= CONTACT ================= */
 
 .contact {
     background: #0d0d0d;
@@ -363,7 +360,7 @@ section {
     margin-bottom: 30px;
 }
 
-/* FOOTER */
+/* ================= FOOTER ================= */
 
 footer {
     padding: 30px 8%;
@@ -375,14 +372,13 @@ footer {
 footer p {
     color: #777777;
     font-size: 12px;
-    letter-spacing: 1px;
 }
 
 footer span {
     color: #d4af37;
 }
 
-/* MOBILE */
+/* ================= TABLET ================= */
 
 @media (max-width: 900px) {
 
@@ -407,14 +403,13 @@ footer span {
     }
 
     .hero-content {
-        padding: 140px 7% 70px;
-        order: 1;
+        padding: 150px 7% 70px;
+        min-height: auto;
     }
 
     .hero-gallery {
         height: 65vh;
         min-height: 450px;
-        order: 2;
     }
 
     .hero h1 {
@@ -430,36 +425,125 @@ footer span {
     }
 }
 
-@media (max-width: 500px) {
+/* ================= MOBILE ================= */
+
+@media (max-width: 600px) {
+
+    header {
+        position: relative;
+        background: #080808;
+        padding: 18px 10px 15px;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .logo {
+        width: 125px;
+        margin-bottom: 14px;
+    }
 
     nav {
-        display: none;
+        display: flex;
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+        gap: 15px;
+        flex-wrap: nowrap;
+    }
+
+    nav a {
+        font-size: 10px;
+        letter-spacing: 0.5px;
+        white-space: nowrap;
+    }
+
+    .hero {
+        display: block;
+        min-height: auto;
+    }
+
+    .hero-content {
+        padding: 65px 9% 65px;
+    }
+
+    .small-title {
+        font-size: 12px;
+        line-height: 1.8;
+        letter-spacing: 2.5px;
+        margin-bottom: 22px;
     }
 
     .hero h1 {
-        font-size: 42px;
+        font-size: 45px;
+        line-height: 0.98;
     }
 
     .tagline {
-        font-size: 18px;
+        font-size: 19px;
+        margin-bottom: 25px;
+    }
+
+    .hero-description {
+        font-size: 15px;
+        line-height: 1.7;
+    }
+
+    .buttons {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .btn {
+        text-align: center;
+        width: 100%;
+    }
+
+    .hero-gallery {
+        height: 58vh;
+        min-height: 350px;
     }
 
     .gallery-label {
         left: 20px;
-        bottom: 60px;
+        bottom: 65px;
     }
 
     .slider-dots {
         right: 20px;
-        bottom: 25px;
+        bottom: 28px;
+    }
+
+    section {
+        padding: 70px 8%;
+    }
+
+    .section-title {
+        font-size: 34px;
+    }
+
+    .service-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .service-card {
+        padding: 30px 25px;
+    }
+
+    .contact-box {
+        padding: 40px 20px;
+    }
+
+    .contact-box h2 {
+        font-size: 32px;
     }
 }
+
 </style>
 </head>
 
 <body>
 
-<!-- HEADER -->
+<!-- ================= HEADER ================= -->
 
 <header>
 
@@ -481,7 +565,7 @@ footer span {
 </header>
 
 
-<!-- HERO -->
+<!-- ================= HOME ================= -->
 
 <section class="hero" id="home">
 
@@ -553,39 +637,20 @@ footer span {
             >
         </div>
 
-
         <div class="gallery-label">
-
             <strong>ARTILUXE INTERIORS</strong>
-
-            <span>
-                Luxury • Texture • Architecture
-            </span>
-
+            <span>Luxury • Texture • Architecture</span>
         </div>
-
 
         <div class="slider-dots">
 
-            <div
-                class="dot active"
-                onclick="showSlide(0)"
-            ></div>
+            <div class="dot active" onclick="showSlide(0)"></div>
 
-            <div
-                class="dot"
-                onclick="showSlide(1)"
-            ></div>
+            <div class="dot" onclick="showSlide(1)"></div>
 
-            <div
-                class="dot"
-                onclick="showSlide(2)"
-            ></div>
+            <div class="dot" onclick="showSlide(2)"></div>
 
-            <div
-                class="dot"
-                onclick="showSlide(3)"
-            ></div>
+            <div class="dot" onclick="showSlide(3)"></div>
 
         </div>
 
@@ -594,7 +659,7 @@ footer span {
 </section>
 
 
-<!-- SERVICES -->
+<!-- ================= SERVICES ================= -->
 
 <section class="services" id="services">
 
@@ -607,18 +672,13 @@ footer span {
         spaces into refined expressions of art and luxury.
     </p>
 
-
     <div class="service-grid">
 
         <div class="service-card">
 
-            <div class="service-number">
-                01
-            </div>
+            <div class="service-number">01</div>
 
-            <h3>
-                Interior Design
-            </h3>
+            <h3>Interior Design</h3>
 
             <p>
                 Bespoke residential and commercial interiors
@@ -631,13 +691,9 @@ footer span {
 
         <div class="service-card">
 
-            <div class="service-number">
-                02
-            </div>
+            <div class="service-number">02</div>
 
-            <h3>
-                Wall Panels & Finishes
-            </h3>
+            <h3>Wall Panels & Finishes</h3>
 
             <p>
                 Premium decorative wall panels, textures,
@@ -650,13 +706,9 @@ footer span {
 
         <div class="service-card">
 
-            <div class="service-number">
-                03
-            </div>
+            <div class="service-number">03</div>
 
-            <h3>
-                Luxury Interiors
-            </h3>
+            <h3>Luxury Interiors</h3>
 
             <p>
                 Complete luxury interior solutions combining
@@ -671,7 +723,7 @@ footer span {
 </section>
 
 
-<!-- ABOUT -->
+<!-- ================= ABOUT ================= -->
 
 <section class="about" id="about">
 
@@ -699,7 +751,7 @@ footer span {
 </section>
 
 
-<!-- CONTACT -->
+<!-- ================= CONTACT ================= -->
 
 <section class="contact" id="contact">
 
@@ -725,7 +777,7 @@ footer span {
 </section>
 
 
-<!-- FOOTER -->
+<!-- ================= FOOTER ================= -->
 
 <footer>
 
@@ -737,7 +789,7 @@ footer span {
 </footer>
 
 
-<!-- SLIDESHOW SCRIPT -->
+<!-- ================= SLIDESHOW ================= -->
 
 <script>
 
