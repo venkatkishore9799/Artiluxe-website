@@ -7,7 +7,6 @@
 <title>Artiluxe Interiors | Where Art Meets Luxury</title>
 
 <style>
-
 * {
     margin: 0;
     padding: 0;
@@ -25,7 +24,7 @@ body {
     line-height: 1.6;
 }
 
-/* ================= HEADER ================= */
+/* HEADER */
 
 header {
     position: absolute;
@@ -39,7 +38,7 @@ header {
     justify-content: space-between;
     background: linear-gradient(
         to bottom,
-        rgba(0,0,0,0.85),
+        rgba(0,0,0,0.9),
         rgba(0,0,0,0)
     );
 }
@@ -66,12 +65,12 @@ nav a:hover {
     color: #d4af37;
 }
 
-/* ================= HERO ================= */
+/* HERO */
 
 .hero {
     min-height: 100vh;
     display: grid;
-    grid-template-columns: 45% 55%;
+    grid-template-columns: 43% 57%;
     align-items: center;
     overflow: hidden;
 }
@@ -85,18 +84,18 @@ nav a:hover {
 .small-title {
     color: #d4af37;
     font-size: 14px;
-    letter-spacing: 4px;
+    letter-spacing: 3px;
     text-transform: uppercase;
-    margin-bottom: 18px;
+    margin-bottom: 20px;
 }
 
 .hero h1 {
     font-family: Georgia, serif;
-    font-size: clamp(42px, 5vw, 78px);
+    font-size: clamp(44px, 5vw, 78px);
     line-height: 0.95;
     font-weight: 400;
-    letter-spacing: 3px;
-    margin-bottom: 22px;
+    letter-spacing: 2px;
+    margin-bottom: 25px;
 }
 
 .hero h1 span {
@@ -152,7 +151,7 @@ nav a:hover {
     color: #000000;
 }
 
-/* ================= IMAGE SLIDESHOW ================= */
+/* IMAGE SLIDESHOW */
 
 .hero-gallery {
     position: relative;
@@ -180,7 +179,7 @@ nav a:hover {
     display: block;
 }
 
-/* Dark luxury overlay */
+/* IMAGE OVERLAY */
 
 .hero-gallery::after {
     content: "";
@@ -189,25 +188,24 @@ nav a:hover {
     background:
         linear-gradient(
             90deg,
-            rgba(8,8,8,0.35),
-            rgba(8,8,8,0.05)
+            rgba(0,0,0,0.25),
+            rgba(0,0,0,0)
         ),
         linear-gradient(
             0deg,
             rgba(0,0,0,0.35),
-            transparent 35%
+            transparent 40%
         );
     pointer-events: none;
 }
 
-/* Gallery label */
+/* IMAGE LABEL */
 
 .gallery-label {
     position: absolute;
     left: 35px;
     bottom: 70px;
     z-index: 10;
-    color: white;
 }
 
 .gallery-label strong {
@@ -219,12 +217,12 @@ nav a:hover {
 }
 
 .gallery-label span {
-    color: #eeeeee;
+    color: #ffffff;
     font-size: 12px;
     letter-spacing: 1px;
 }
 
-/* Slider dots */
+/* DOTS */
 
 .slider-dots {
     position: absolute;
@@ -232,7 +230,7 @@ nav a:hover {
     right: 35px;
     z-index: 20;
     display: flex;
-    gap: 9px;
+    gap: 10px;
 }
 
 .dot {
@@ -246,10 +244,10 @@ nav a:hover {
 
 .dot.active {
     background: #d4af37;
-    transform: scale(1.25);
+    transform: scale(1.3);
 }
 
-/* ================= SECTIONS ================= */
+/* SECTIONS */
 
 section {
     padding: 100px 8%;
@@ -274,7 +272,7 @@ section {
     margin: 0 auto 55px;
 }
 
-/* ================= SERVICES ================= */
+/* SERVICES */
 
 .services {
     background: #0d0d0d;
@@ -317,7 +315,7 @@ section {
     font-size: 14px;
 }
 
-/* ================= ABOUT ================= */
+/* ABOUT */
 
 .about {
     background: #080808;
@@ -335,7 +333,7 @@ section {
     font-size: 16px;
 }
 
-/* ================= CONTACT ================= */
+/* CONTACT */
 
 .contact {
     background: #0d0d0d;
@@ -365,7 +363,7 @@ section {
     margin-bottom: 30px;
 }
 
-/* ================= FOOTER ================= */
+/* FOOTER */
 
 footer {
     padding: 30px 8%;
@@ -384,7 +382,7 @@ footer span {
     color: #d4af37;
 }
 
-/* ================= MOBILE ================= */
+/* MOBILE */
 
 @media (max-width: 900px) {
 
@@ -430,7 +428,6 @@ footer span {
     section {
         padding: 75px 7%;
     }
-
 }
 
 @media (max-width: 500px) {
@@ -456,15 +453,13 @@ footer span {
         right: 20px;
         bottom: 25px;
     }
-
 }
-
 </style>
 </head>
 
 <body>
 
-<!-- ================= HEADER ================= -->
+<!-- HEADER -->
 
 <header>
 
@@ -486,7 +481,7 @@ footer span {
 </header>
 
 
-<!-- ================= HERO ================= -->
+<!-- HERO -->
 
 <section class="hero" id="home">
 
@@ -526,34 +521,34 @@ footer span {
     </div>
 
 
-    <!-- ================= SLIDESHOW ================= -->
+    <!-- SLIDESHOW -->
 
     <div class="hero-gallery">
 
         <div class="slide active">
             <img
-                src="artiluxe-interior-1.jpg"
+                src="artiluxe-interior-1%5B1%5D.jpg"
                 alt="Luxury Artiluxe interior"
             >
         </div>
 
         <div class="slide">
             <img
-                src="artiluxe-interior-2.jpg"
+                src="artiluxe-interior-2%5B1%5D.jpg"
                 alt="Luxury interior wall design"
             >
         </div>
 
         <div class="slide">
             <img
-                src="artiluxe-interior-3.jpg"
+                src="artiluxe-interior-3%5B1%5D.jpg"
                 alt="Luxury TV wall interior"
             >
         </div>
 
         <div class="slide">
             <img
-                src="artiluxe-interior-4.jpg"
+                src="artiluxe-interior-4%5B1%5D.jpg"
                 alt="Luxury marble interior"
             >
         </div>
@@ -599,7 +594,7 @@ footer span {
 </section>
 
 
-<!-- ================= SERVICES ================= -->
+<!-- SERVICES -->
 
 <section class="services" id="services">
 
@@ -676,7 +671,7 @@ footer span {
 </section>
 
 
-<!-- ================= ABOUT ================= -->
+<!-- ABOUT -->
 
 <section class="about" id="about">
 
@@ -704,7 +699,7 @@ footer span {
 </section>
 
 
-<!-- ================= CONTACT ================= -->
+<!-- CONTACT -->
 
 <section class="contact" id="contact">
 
@@ -730,7 +725,7 @@ footer span {
 </section>
 
 
-<!-- ================= FOOTER ================= -->
+<!-- FOOTER -->
 
 <footer>
 
@@ -742,7 +737,7 @@ footer span {
 </footer>
 
 
-<!-- ================= SLIDESHOW SCRIPT ================= -->
+<!-- SLIDESHOW SCRIPT -->
 
 <script>
 
@@ -750,7 +745,6 @@ let currentSlide = 0;
 
 const slides = document.querySelectorAll(".slide");
 const dots = document.querySelectorAll(".dot");
-
 
 function showSlide(index) {
 
@@ -763,16 +757,13 @@ function showSlide(index) {
     dots[currentSlide].classList.add("active");
 }
 
-
 function nextSlide() {
 
     let next =
         (currentSlide + 1) % slides.length;
 
     showSlide(next);
-
 }
-
 
 setInterval(nextSlide, 5000);
 
